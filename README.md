@@ -13,20 +13,21 @@ The Astrand-Rhyming Test is one of the most widely used submaximal exercise test
 
 ## 3. Prerequisites
 
-A modern web browser that supports JavaScript.
+* npm 11.5.2
+* node 24.8.0
 
 ## 4. Installation
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/oldoc63/Astrand_Web_Html.git
-    cd Astrand_Web_Html
+    git clone https://github.com/oldoc63/Astrand_Web_Mobile.git
+    cd Astrand_Web_Mobile
     ```
-2.  Open the `public/index.html` file in your web browser.
+2.  Run `npm start` file in your (Windows, Linux, Android, Mac) terminal. Follow the link (ctrl + click) http://localhost:3000 to your browser.
 
 ## 5. Usage Instructions
 
-Open the `public/index.html` file in your web browser. Fill in the required fields in the form and click the "Calculate" button.
+Open the tab `V02 Max Estimator` in your web browser. Fill in the required fields in the form and click the "Calculate" button.
 
 *   **Gender**: (male/female)
 *   **Age**: (years)
