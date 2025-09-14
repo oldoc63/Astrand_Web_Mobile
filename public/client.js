@@ -1,4 +1,13 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+    });
+});
+
 document.getElementById('vo2-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
@@ -18,6 +27,9 @@ document.getElementById('vo2-form').addEventListener('submit', async function(ev
     if (response.ok) {
         displayResults(results);
         drawChart(data, results);
+        if (window.innerWidth < 769) {
+            document.getElementById('sidebar').classList.remove('open');
+        }
     } else {
         alert(results.error);
     }
@@ -92,10 +104,11 @@ function drawChart(data, results) {
         },
         yaxis: {
             title: 'Workload (Watts)'
-        }
+        },
+        autosize: true
     };
 
-    Plotly.newPlot('chart', [contour, point], layout);
+    Plotly.newPlot('chart', [contour, point], layout, {responsive: true});
 }
 
 // This is a duplication of the backend logic for client-side chart generation.
